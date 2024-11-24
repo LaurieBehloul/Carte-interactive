@@ -45,7 +45,12 @@ Ce projet est une carte interactive permettant de visualiser les segments ferrov
  **Téléchargez ou clonez le projet** :
    ```bash
    git clone https://github.com/LaurieBehloul/Carte interactive.git
+   ```
 
+### Option 2 : Hébergement en ligne via GitHub Pages
+   ```bash
+https://lauriebehloul.github.io/Carte-interactive/
+   ```
 
-## Auteurs
+### Auteurs
 Laurie Behloul - Développement et conception.
