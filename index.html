@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carte Interactive des Segments de LDFT</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/ol/ol.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="header">
+        <img src="logo-sncf-reseau.png" alt="Logo SNCF" class="logo">
+        <h1 class="map-title">Carte Interactive des Segments de LDFT</h1>
+    </header>
+
+    <div id="map-container">
+        <div id="map"></div>
+        <div id="legend">
+            <h3>Légende</h3>
+            <div class="legend-section">
+                <label>
+                    <input type="checkbox" id="toggle-ldft" onclick="toggleSection('ldft-options')"> Segments LDFT 2021
+                </label>
+                <div id="ldft-options" class="legend-options">
+                    <label>
+                        <input type="checkbox" id="toggle-state" >État de la ligne
+                    </label>
+                    <div id="state-options" class="legend-options">
+                        <label><input type="checkbox" class="state-filter" value="BON"> Bon</label>
+                        <label><input type="checkbox" class="state-filter" value="MOYEN"> Moyen</label>
+                        <label><input type="checkbox" class="state-filter" value="MAUVAIS"> Mauvais</label>
+                        <label><input type="checkbox" class="state-filter" value="NON DEFINI"> Non Défini</label>
+                    </div>
+                    <label>
+                        <input type="checkbox" id="toggle-region"> Région
+                    </label>
+                    <div id="region-options" class="legend-options">
+                        <label><input type="checkbox" value="AURA"> AURA</label>
+                        <label><input type="checkbox" value="IDF"> Île-de-France</label>
+                        <label><input type="checkbox" value="HBN"> Hauts-de-Bretagne</label>
+                        <label><input type="checkbox" value="HDF"> Hauts-de-France</label>
+                        <label><input type="checkbox" value="BFC"> Bourgogne-Franche-Comté</label>
+                        <label><input type="checkbox" value="BPL"> Bretagne</label>
+                        <label><input type="checkbox" value="LC"> Loire-Centre</label>
+                        <label><input type="checkbox" value="CVL"> Centre-Val de Loire</label>
+                        <label><input type="checkbox" value="GE"> Grand Est</label>
+                        <label><input type="checkbox" value="NA"> Nouvelle-Aquitaine</label>
+                        <label><input type="checkbox" value="OCC"> Occitanie</label>
+                        <label><input type="checkbox" value="PACA"> Provence-Alpes-Côte d'Azur</label>
+                    </div>
+                    <label>
+                        <input type="checkbox" id="toggle-length"> Longueur de la ligne
+                    </label>
+                    <div id="length-options" class="legend-options">
+                        <label><input type="checkbox" value="10km"> 10 km</label>
+                        <label><input type="checkbox" value="10-30km"> 10-30 km</label>
+                        <label><input type="checkbox" value=">30km"> > 30 km</label>
+                    </div>
+                    <label>
+                        <input type="checkbox" id="toggle-traffic"> Trafic
+                    </label>
+                    <div id="traffic-options" class="legend-options">
+                        <label><input type="checkbox" value="Avec Trafic"> Avec Trafic</label>
+                        <label><input type="checkbox" value="Sans Trafic"> Sans Trafic</label>
+                    </div>
+                    <label>
+                        <input type="checkbox" id="toggle-suspension" > Risque de suspension
+                    </label>
+                    <div id="suspension-options" class="legend-options">
+                        <label><input type="checkbox" value="OUI"> OUI</label>
+                        <label><input type="checkbox" value="NON"> NON</label>
+                    </div>
+                    <label>
+                        <input type="checkbox" id="toggle-nature"> Nature des travaux
+                    </label>
+                    <div id="nature-options" class="legend-options">
+                        <label><input type="checkbox" value="Régénération Voie"> Régénération Voie</label>
+                        <label><input type="checkbox" value="Gros Travaux Voie"> Gros Travaux Voie</label>
+                        <label><input type="checkbox" value="Régénération Globale"> Régénération Globale</label>
+                        <label><input type="checkbox" value="Autres"> Autres</label>
+                    </div>
+                    <label>
+                        <input type="checkbox" id="toggle-tonnage" > Tonnage brut annuel
+                    </label>
+                    <div id="tonnage-options" class="legend-options">
+                        <label><input type="checkbox" value="100kt"> 100 kt</label>
+                        <label><input type="checkbox" value="100-300kt"> 100-300 kt</label>
+                        <label><input type="checkbox" value=">300kt"> > 300 kt</label>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="popup" class="info-box"></div>
+
+    <script src="https://cdn.jsdelivr.net/npm/ol/dist/ol.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

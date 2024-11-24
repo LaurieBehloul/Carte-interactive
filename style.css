@@ -1,0 +1,158 @@
+/* Style général */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #000; /* Fond noir */
+    color: #fff; /* Texte en blanc */
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    background-color: #1a1a1a; /* Fond gris foncé */
+    padding: 10px 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5); /* Ombre subtile */
+}
+
+.logo {
+    height: 50px;
+    margin-right: 20px;
+}
+
+.map-title {
+    font-size: 24px;
+    font-weight: bold;
+    margin: 0;
+}
+
+#map-container {
+    display: flex;
+    height: calc(100vh - 70px); /* Ajuste la hauteur en fonction du bandeau */
+    margin: 0;
+}
+
+#map {
+    flex: 1;
+    height: 100%;
+}
+
+#legend {
+    width: 250px; /* Réduction légère de la largeur */
+    background-color: #292929; /* Fond gris sombre pour la légende */
+    border: 1px solid #444; /* Bordure subtilement foncée */
+    padding: 15px; /* Réduction des marges internes */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5); /* Ombre douce */
+    border-radius: 8px; /* Coins arrondis */
+    margin: 10px;
+    color: #ddd; /* Texte clair */
+
+    /* Permettre un scroll vertical si nécessaire */
+    max-height: 600px; /* Hauteur augmentée pour afficher plus d'options */
+    overflow-y: auto; /* Scroll vertical */
+    overflow-x: hidden; /* Désactive le scroll horizontal */
+}
+
+/* Réduction des marges et ajustement des sous-options */
+#legend h3 {
+    margin-top: 0;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: left; /* Centrer le titre */
+    color: #f39c12; /* Titre en orange */
+}
+
+.legend-section label {
+    display: block; /* Chaque option apparaît sur une nouvelle ligne */
+    margin-bottom: 8px; /* Réduction de l'espace entre les options */
+    color: #ccc; /* Texte gris clair */
+    cursor: pointer; /* Indique que c'est interactif */
+}
+
+.legend-section label input {
+    margin-right: 10px;
+}
+
+.legend-options {
+    margin-left: 20px; /* Décalage pour les sous-options */
+    display: none; /* Sous-sections masquées par défaut */
+}
+
+/* Style des checkboxes */
+input[type="checkbox"] {
+    margin-right: 10px;
+    transform: scale(0.9); /* Réduction légère de la taille */
+}
+
+/* Style pour les sous-options */
+.legend-options label {
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px; /* Réduction de l'espace entre les sous-options */
+    color: #ccc; /* Texte gris clair */
+}
+
+/* Ajout d'une grille pour les sous-options */
+.legend-options {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Deux colonnes */
+    gap: 10px; /* Espacement entre les options */
+}
+
+/* Style des popups */
+.ol-popup {
+    position: absolute;
+    background-color: #333; /* Fond gris foncé */
+    padding: 15px;
+    border: 1px solid #444; /* Bordure foncée */
+    border-radius: 8px;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.5); /* Ombre subtile */
+    font-size: 14px;
+    color: #fff; /* Texte en blanc */
+    z-index: 1000;
+    width: 400px; /* Largeur ajustée */
+    line-height: 1.6; /* Espacement des lignes */
+}
+
+/* Titres des sections dans le popup */
+.ol-popup h4 {
+    font-size: 16px;
+    font-weight: bold;
+    margin-top: 10px;
+    color: #f39c12; /* Orange pour mettre en avant */
+}
+
+/* Paragraphes dans le popup */
+.ol-popup p {
+    margin: 5px 0;
+}
+
+/* Effet hover pour les sections de la légende */
+.legend-section label:hover {
+    color: #f39c12; /* Met en surbrillance au survol */
+}
+
+/* Icône de bascule pour les sous-sections */
+.legend-options .toggle-icon {
+    margin-left: auto;
+    cursor: pointer;
+    color: #fff; /* Icône blanche */
+}
+
+/* Amélioration pour les sous-sections affichées */
+.legend-section .sub-options {
+    margin-left: 20px; /* Décalage supplémentaire pour les sous-niveaux */
+    padding-left: 10px;
+    border-left: 2px solid #555; /* Séparateur vertical subtil */
+}
+
+/* Ajouter une bordure subtile en bas des sections */
+.legend-section {
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #444;
+}
+
+/* Réduction de la taille des cases pour plus de compacité */
+input[type="checkbox"] {
+    transform: scale(0.9);
+}
